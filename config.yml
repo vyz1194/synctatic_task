@@ -1,0 +1,24 @@
+source_file_1_path: D:\Search\synctatic\source_files\customer_details_1.csv
+source_file_2_path: D:\Search\synctatic\source_files\customer_details_2.csv
+join_key: name
+join_type: inner
+coloumns_to_drop:
+  - index
+  - age
+
+filter_columns: 
+  weight:
+    filter_type: 
+      range: 
+        lower_bound: 150
+        upper_bound: 180 
+  location:  
+      filter_type: 
+        values:
+          - CHINA
+          - FRANCE
+  height:
+    filter_type: 
+      range: 
+        lower_bound: 160
+        upper_bound: 185
