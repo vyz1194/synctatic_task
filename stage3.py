@@ -12,14 +12,14 @@ def filter():
     reciever,stage_2_conn = Pipe()
     p3 = Process(target=dropper, args=(stage_2_conn,))
     p3.start()
-    print("stage 3 started")
+    #print("stage 3 started")
     dropped=reciever.recv()
     print("stage 3")
-    print(dropped)
-    print("succefully dropped")
+    #print(dropped)
+    #print("succefully dropped")
     filtered=dropped
 
-    print("Before")
+    print("Before Filtering")
     print(filtered)
     columns_to_be_filtered=config['filter_columns']
     for column_to_be_filtered,filter_condition in columns_to_be_filtered.items():
@@ -29,7 +29,7 @@ def filter():
     	   filtered=filtered[(lower_bound<filtered[column_to_be_filtered]) & (filtered[column_to_be_filtered]<upper_bound)]
         elif(filter_condition['filter_type'].keys()[0]=='values'):
             filtered=filtered[filtered[column_to_be_filtered].isin(filter_condition['filter_type']['values'])]
-    print("after")
+    print("After Filtering")
     print(filtered)
     
 
