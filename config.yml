@@ -1,5 +1,5 @@
-source_file_1_path: D:\Search\synctatic\source_files\customer_details_1.csv
-source_file_2_path: D:\Search\synctatic\source_files\customer_details_2.csv
+source_file_1_path: <path>\customer_details_1.csv
+source_file_2_path: <path>\customer_details_2.csv
 join_key: name
 join_type: inner
 coloumns_to_drop:
