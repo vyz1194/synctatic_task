@@ -7,7 +7,7 @@ established a multi stage pipeline connected via multiprocesssing pipes
 
 ###TODO :###
 
-Error Handling
-File Checks
-Trying to convert it to Stream pipeline like fashion where the code keeps running and checks and waits for the files to arrive
+Error Handling,
+File Checks,
+Try to convert this into near realtime execution, where the code keeps running and checks and waits for the files to arrive
 
